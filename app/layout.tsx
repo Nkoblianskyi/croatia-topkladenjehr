@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "TopKladenjehr - Vodič za Sportsko Klađenje u Hrvatskoj 2025",
   description:
     "TopKladenjehr je vaš pouzdani sportski portal s recenzijama najboljih kladionica u Hrvatskoj. Stručne analize, usporedbe kvota i ekskluzivni bonusi za 2025. godinu.",
-   keywords: [
+  keywords: [
     "top kladionice hrvatska",
     "najbolje kladionice",
     "kladionice hrvatska 2025",
