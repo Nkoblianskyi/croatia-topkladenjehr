@@ -207,7 +207,7 @@ export function HrvatskaBettingRatingList({ sites }: RatingListProps) {
                 >
                   <div className="grid grid-cols-[40%_60%] gap-0">
                     <div className="p-6 flex flex-col items-center justify-center border-r-2 border-journal-border bg-white">
-                      <div className="relative h-16 w-32 mb-4 bg-white p-4">
+                      <div className="relative h-16 w-32 mb-4 bg-black p-4">
                         <Image
                           src={site.logo || "/placeholder.svg"}
                           alt={site.name}

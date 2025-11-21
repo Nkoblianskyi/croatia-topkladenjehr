@@ -16,7 +16,7 @@ export function HrvatskaBettingHero() {
   }
 
   return (
-    <section className="relative h-[200px] md:h-[300px] overflow-hidden">
+    <section className="relative h-[200px] md:h-[250px] overflow-hidden">
       <div className="absolute inset-0 bg-black/60"></div>
 
       <div className="container mx-auto sm:max-w-[1200px] relative z-10 px-4 h-full flex flex-col justify-center">
@@ -74,11 +74,12 @@ export function HrvatskaBettingHero() {
               Politika transparentnosti
             </button>
           </div>
-        </div>
-
-        <div className="text-center pb-2">
+          
+        <div className="text-center pb-2 mt-2">
           <p className="text-[10px] md:text-xs text-white/70">Zadnje ažurirano: Siječanj 2025</p>
         </div>
+        </div>
+
       </div>
 
       <AdvertiserInfoModal isOpen={isModalOpen} onClose={closeModal} />
