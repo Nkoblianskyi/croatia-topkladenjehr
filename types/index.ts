@@ -34,7 +34,7 @@ export const bettingSites: BettingSite[] = [
   {
     id: 2,
     name: "Germania Sport",
-    logo: "/germania.svg", // Changed from .svg to .jpg
+    logo: "/germania.png", // Changed from .svg to .jpg
     bonus: "Cash Out na Klađenju Uživo",
     url: "https://www.germaniasport.hr/",
     rating: 9.7,
