@@ -1,0 +1,343 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* New light sports journal color scheme - clean, modern, professional */
+  --background: oklch(0.99 0.002 220);
+  --foreground: oklch(0.2 0.01 240);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.01 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.01 240);
+
+  /* Primary - Deep blue for trust and professionalism */
+  --primary: oklch(0.4 0.15 250);
+  --primary-foreground: oklch(0.99 0 0);
+
+  /* Secondary - Warm coral for energy and engagement */
+  --secondary: oklch(0.65 0.14 30);
+  --secondary-foreground: oklch(0.99 0 0);
+
+  --muted: oklch(0.96 0.005 240);
+  --muted-foreground: oklch(0.5 0.02 240);
+
+  /* Accent - Vibrant green for success and action */
+  --accent: oklch(0.55 0.16 150);
+  --accent-foreground: oklch(0.99 0 0);
+
+  --destructive: oklch(0.55 0.2 20);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.9 0.005 240);
+  --input: oklch(0.9 0.005 240);
+  --ring: oklch(0.4 0.15 250);
+
+  --chart-1: oklch(0.4 0.15 250);
+  --chart-2: oklch(0.65 0.14 30);
+  --chart-3: oklch(0.55 0.16 150);
+  --chart-4: oklch(0.5 0.18 280);
+  --chart-5: oklch(0.6 0.14 180);
+
+  --radius: 0.5rem;
+  --sidebar: oklch(0.99 0.002 220);
+  --sidebar-foreground: oklch(0.2 0.01 240);
+  --sidebar-primary: oklch(0.4 0.15 250);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.96 0.005 240);
+  --sidebar-accent-foreground: oklch(0.2 0.01 240);
+  --sidebar-border: oklch(0.9 0.005 240);
+  --sidebar-ring: oklch(0.4 0.15 250);
+
+  /* New journal colors for modern sports aesthetic */
+  --journal-black: oklch(0.2 0.01 240);
+  --journal-charcoal: oklch(0.3 0.02 240);
+  --journal-gray: oklch(0.5 0.02 240);
+  --journal-light-gray: oklch(0.75 0.01 240);
+  --journal-border: oklch(0.9 0.005 240);
+  --journal-paper: oklch(0.99 0.002 220);
+  --journal-white: oklch(1 0 0);
+
+  /* Modern sports journal accent colors - light and vibrant */
+  --journal-blue: oklch(0.4 0.15 250);
+  --journal-blue-light: oklch(0.7 0.12 250);
+  --journal-orange: oklch(0.65 0.14 30);
+  --journal-green: oklch(0.55 0.16 150);
+  --journal-red: oklch(0.55 0.2 20);
+  --journal-purple: oklch(0.5 0.18 280);
+  --journal-gold: oklch(0.7 0.12 75);
+
+  /* Croatian flag colors */
+  --croatia-red: oklch(0.55 0.22 25);
+  --croatia-white: oklch(1 0 0);
+  --croatia-blue: oklch(0.35 0.15 250);
+}
+
+.dark {
+  --background: oklch(0.12 0.01 240);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.15 0.01 240);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.15 0.01 240);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.55 0.18 240);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.65 0.15 35);
+  --secondary-foreground: oklch(0.15 0.01 240);
+  --muted: oklch(0.25 0.01 240);
+  --muted-foreground: oklch(0.65 0.02 240);
+  --accent: oklch(0.6 0.2 240);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.5 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.25 0.01 240);
+  --input: oklch(0.25 0.01 240);
+  --ring: oklch(0.55 0.18 240);
+  --chart-1: oklch(0.55 0.18 240);
+  --chart-2: oklch(0.65 0.15 35);
+  --chart-3: oklch(0.6 0.15 145);
+  --chart-4: oklch(0.65 0.18 280);
+  --chart-5: oklch(0.6 0.15 180);
+  --sidebar: oklch(0.15 0.01 240);
+  --sidebar-foreground: oklch(0.98 0 0);
+  --sidebar-primary: oklch(0.55 0.18 240);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.25 0.01 240);
+  --sidebar-accent-foreground: oklch(0.98 0 0);
+  --sidebar-border: oklch(0.25 0.01 240);
+  --sidebar-ring: oklch(0.55 0.18 240);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Journal color utilities */
+  --color-journal-black: var(--journal-black);
+  --color-journal-charcoal: var(--journal-charcoal);
+  --color-journal-gray: var(--journal-gray);
+  --color-journal-light-gray: var(--journal-light-gray);
+  --color-journal-border: var(--journal-border);
+  --color-journal-paper: var(--journal-paper);
+  --color-journal-white: var(--journal-white);
+  --color-journal-blue: var(--journal-blue);
+  --color-journal-blue-light: var(--journal-blue-light);
+  --color-journal-orange: var(--journal-orange);
+  --color-journal-green: var(--journal-green);
+  --color-journal-red: var(--journal-red);
+  --color-journal-purple: var(--journal-purple);
+  --color-journal-gold: var(--journal-gold);
+
+  /* Croatian color utilities */
+  --color-croatia-red: var(--croatia-red);
+  --color-croatia-white: var(--croatia-white);
+  --color-croatia-blue: var(--croatia-blue);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Updated utility classes for modern sports journal design */
+.bg-journal-black {
+  background-color: var(--journal-black);
+}
+
+.bg-journal-charcoal {
+  background-color: var(--journal-charcoal);
+}
+
+.bg-journal-gray {
+  background-color: var(--journal-gray);
+}
+
+.bg-journal-light-gray {
+  background-color: var(--journal-light-gray);
+}
+
+.bg-journal-border {
+  background-color: var(--journal-border);
+}
+
+.bg-journal-paper {
+  background-color: var(--journal-paper);
+}
+
+.bg-journal-white {
+  background-color: var(--journal-white);
+}
+
+.text-journal-black {
+  color: var(--journal-black);
+}
+
+.text-journal-charcoal {
+  color: var(--journal-charcoal);
+}
+
+.text-journal-gray {
+  color: var(--journal-gray);
+}
+
+.text-journal-light-gray {
+  color: var(--journal-light-gray);
+}
+
+.border-journal-black {
+  border-color: var(--journal-black);
+}
+
+.border-journal-charcoal {
+  border-color: var(--journal-charcoal);
+}
+
+.border-journal-border {
+  border-color: var(--journal-border);
+}
+
+.bg-journal-blue {
+  background-color: var(--journal-blue);
+}
+
+.bg-journal-blue-light {
+  background-color: var(--journal-blue-light);
+}
+
+.bg-journal-orange {
+  background-color: var(--journal-orange);
+}
+
+.bg-journal-green {
+  background-color: var(--journal-green);
+}
+
+.bg-journal-red {
+  background-color: var(--journal-red);
+}
+
+.bg-journal-purple {
+  background-color: var(--journal-purple);
+}
+
+.bg-journal-gold {
+  background-color: var(--journal-gold);
+}
+
+.text-journal-blue {
+  color: var(--journal-blue);
+}
+
+.text-journal-blue-light {
+  color: var(--journal-blue-light);
+}
+
+.text-journal-orange {
+  color: var(--journal-orange);
+}
+
+.text-journal-green {
+  color: var(--journal-green);
+}
+
+.text-journal-red {
+  color: var(--journal-red);
+}
+
+.text-journal-purple {
+  color: var(--journal-purple);
+}
+
+.text-journal-gold {
+  color: var(--journal-gold);
+}
+
+.border-journal-blue {
+  border-color: var(--journal-blue);
+}
+
+.border-journal-orange {
+  border-color: var(--journal-orange);
+}
+
+.border-journal-green {
+  border-color: var(--journal-green);
+}
+
+.border-journal-gold {
+  border-color: var(--journal-gold);
+}
+
+/* Croatian flag color utilities */
+.text-croatia-red {
+  color: var(--croatia-red);
+}
+
+.text-croatia-white {
+  color: var(--croatia-white);
+}
+
+.text-croatia-blue {
+  color: var(--croatia-blue);
+}
+
+.bg-croatia-red {
+  background-color: var(--croatia-red);
+}
+
+.bg-croatia-white {
+  background-color: var(--croatia-white);
+}
+
+.bg-croatia-blue {
+  background-color: var(--croatia-blue);
+}
+
+/* Modern decorative elements */
+.journal-divider {
+  border-top: 2px solid var(--journal-border);
+  margin: 2rem 0;
+}
+
+.journal-section-border {
+  border-top: 1px solid var(--journal-border);
+  padding: 0.5rem 0;
+}
